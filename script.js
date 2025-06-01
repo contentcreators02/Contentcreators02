@@ -1,3 +1,2 @@
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("Website loaded successfully!");
-});
+
+console.log("Content Creators 02 loaded successfully.");
