@@ -1,0 +1,4 @@
+
+User-agent: *
+Allow: /
+Sitemap: https://contentcreators02.github.io/Contentcreators02/sitemap.xml

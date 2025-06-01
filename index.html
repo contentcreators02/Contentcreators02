@@ -1,70 +1,32 @@
+
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Content Creators 02</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Content Creators 02 - বাংলা শিক্ষামূলক কনটেন্ট</title>
+  <meta name="description" content="Content Creators 02 - ইসলামিক, শিক্ষামূলক গল্প, কবিতা, ছড়া ও মোটিভেশনাল ভিডিওর বাংলা ওয়েবসাইট।">
+  <meta name="keywords" content="Content Creators 02, ইসলামিক গল্প, শিক্ষামূলক গল্প, বাংলা কবিতা, ছড়া, মোটিভেশনাল ভিডিও, Bengali content, Islamic stories, educational stories, বাংলা ওয়েবসাইট">
+  <meta name="author" content="JR Jewel Islam Rafi">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Content Creators 02</h1>
-        <nav>
-            <ul>
-                <li><a href="#stories">গল্প</a></li>
-                <li><a href="#poems">কবিতা</a></li>
-                <li><a href="#videos">ভিডিও</a></li>
-                <li><a href="#add-story">নতুন গল্প যোগ করুন</a></li>
-                <li><a href="#contact">যোগাযোগ</a></li>
-            </ul>
-        </nav>
-    </header>
+  <h1>Content Creators 02</h1>
+  <p>ইসলামিক, শিক্ষামূলক, আবেগঘন গল্প, কবিতা, ছড়া, ভিডিও ও আরও অনেক কিছু এখানে পাবেন।</p>
 
-    <main>
-        <section id="stories">
-            <h2>শিক্ষামূলক গল্প</h2>
-            <article>
-                <h3>মাঝরাতে এক ইমোশনাল গল্প</h3>
-                <p>এক গ্রাম থেকে উঠে আসা ছেলে শহরের কষ্ট বুঝেছিলো। সে জানত জীবনে সফল হওয়ার জন্য কঠোর পরিশ্রম জরুরি। সে কখনো হাল ছাড়েনি এবং ধীরে ধীরে স্বপ্ন পূরণ করেছে।</p>
-            </article>
-            <article>
-                <h3>আত্মবিশ্বাসের গল্প</h3>
-                <p>নিজের প্রতি বিশ্বাস রেখে কেউ বড় হতে পারে। জীবন কঠিন হলেও আমাদের মনে দৃঢ়তা রাখতে হবে এবং হাল ছাড়তে পারব না।</p>
-            </article>
-        </section>
+  <h2>যোগাযোগ করুন</h2>
+  <form id="contactForm">
+    <label for="name">নাম:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="message">বার্তা:</label><br>
+    <textarea id="message" name="message" required></textarea><br><br>
+    <button type="submit">পাঠান</button>
+  </form>
 
-        <section id="poems">
-            <h2>কবিতা ও ছড়া</h2>
-            <article>
-                <h3>জীবনের গান</h3>
-                <p>জীবন চলে অদ্ভুত পথে, সুখ-দুঃখের মিশেল মেলে। প্রতিটি মুহূর্তে শেখা যায় কিছু নতুন, চলতে থাকে অজানার পথে পেলে।</p>
-            </article>
-        </section>
+  <h3>আপনার জমাকৃত তথ্য:</h3>
+  <div id="storedData" style="background: #e8f4ff; padding: 10px; border: 1px solid #ccc;"></div>
 
-        <section id="videos">
-            <h2>মোটিভেশনাল ভিডিও</h2>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/9bZkp7q19f0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </section>
-
-        <section id="add-story">
-            <h2>নতুন গল্প যোগ করুন</h2>
-            <form id="storyForm">
-                <input type="text" id="storyTitle" placeholder="গল্পের শিরোনাম" required />
-                <textarea id="storyBody" rows="4" placeholder="গল্পের বিবরণ" required></textarea>
-                <button type="submit">গল্প যোগ করুন</button>
-            </form>
-        </section>
-    </main>
-
-    <footer id="contact">
-        <h2>যোগাযোগ</h2>
-        <p>ইমেইল: ontorasheikh293@gmail.com</p>
-        <p>ফোন: 01576848405</p>
-        <p>ফেসবুক পেজ: <a href="https://www.facebook.com/ContentCreators02" target="_blank">Content Creators 02</a></p>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
