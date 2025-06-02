@@ -3,29 +3,60 @@
 <html lang="bn">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Content Creators 02 - বাংলা শিক্ষামূলক কনটেন্ট</title>
-  <meta name="description" content="Content Creators 02 - ইসলামিক, শিক্ষামূলক গল্প, কবিতা, ছড়া ও মোটিভেশনাল ভিডিওর বাংলা ওয়েবসাইট।">
-  <meta name="keywords" content="Content Creators 02, ইসলামিক গল্প, শিক্ষামূলক গল্প, বাংলা কবিতা, ছড়া, মোটিভেশনাল ভিডিও, Bengali content, Islamic stories, educational stories, বাংলা ওয়েবসাইট">
-  <meta name="author" content="JR Jewel Islam Rafi">
-  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Content Creators 02</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Content Creators 02</h1>
-  <p>ইসলামিক, শিক্ষামূলক, আবেগঘন গল্প, কবিতা, ছড়া, ভিডিও ও আরও অনেক কিছু এখানে পাবেন।</p>
+  <header>
+    <h1>Content Creators 02</h1>
+    <nav>
+      <ul>
+        <li><a href="#stories">গল্প</a></li>
+        <li><a href="#poems">কবিতা</a></li>
+        <li><a href="#rhymes">ছড়া</a></li>
+        <li><a href="#novels">উপন্যাস</a></li>
+        <li><a href="#short-stories">ছোট গল্প</a></li>
+        <li><a href="#long-stories">বড় গল্প</a></li>
+        <li><a href="#jokes">জোকস</a></li>
+        <li><a href="#educational">শিক্ষামূলক</a></li>
+        <li><a href="#rhythms">ছন্দ</a></li>
+        <li><a href="#submit">লিখা পাঠান</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <h2>যোগাযোগ করুন</h2>
-  <form id="contactForm">
-    <label for="name">নাম:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
-    <label for="message">বার্তা:</label><br>
-    <textarea id="message" name="message" required></textarea><br><br>
-    <button type="submit">পাঠান</button>
-  </form>
+  <main>
+    <section id="stories"><h2>গল্প</h2><div class="content-list"></div></section>
+    <section id="poems"><h2>কবিতা</h2><div class="content-list"></div></section>
+    <section id="rhymes"><h2>ছড়া</h2><div class="content-list"></div></section>
+    <section id="novels"><h2>উপন্যাস</h2><div class="content-list"></div></section>
+    <section id="short-stories"><h2>ছোট গল্প</h2><div class="content-list"></div></section>
+    <section id="long-stories"><h2>বড় গল্প</h2><div class="content-list"></div></section>
+    <section id="jokes"><h2>জোকস</h2><div class="content-list"></div></section>
+    <section id="educational"><h2>শিক্ষামূলক</h2><div class="content-list"></div></section>
+    <section id="rhythms"><h2>ছন্দ</h2><div class="content-list"></div></section>
 
-  <h3>আপনার জমাকৃত তথ্য:</h3>
-  <div id="storedData" style="background: #e8f4ff; padding: 10px; border: 1px solid #ccc;"></div>
+    <section id="submit">
+      <h2>আপনার লেখা পাঠান</h2>
+      <form id="submission-form">
+        <input type="text" id="name" placeholder="আপনার নাম" required />
+        <input type="email" id="email" placeholder="আপনার ইমেইল" required />
+        <select id="type">
+          <option value="story">গল্প</option>
+          <option value="poem">কবিতা</option>
+          <option value="joke">জোকস</option>
+          <option value="novel">উপন্যাস</option>
+        </select>
+        <textarea id="content" placeholder="আপনার লেখা এখানে লিখুন..." rows="6" required></textarea>
+        <button type="submit">পাঠান</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Content Creators 02 | <a href="https://www.facebook.com/profile.php?id=61575866495971" target="_blank" style="color:#fff;">আমাদের ফেসবুক পেইজ</a></p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
