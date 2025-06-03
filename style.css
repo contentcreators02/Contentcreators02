@@ -1,137 +1,76 @@
 body {
-  font-family: 'Noto Sans Bengali', sans-serif;
-  background-color: #f9f9f9;
+  font-family: 'Siyam Rupali', sans-serif;
   margin: 0;
-  padding: 0 15px;
-  color: #222;
+  padding: 0;
+  background: #f4f4f4;
+  transition: background 0.3s, color 0.3s;
 }
-
 header {
-  background: linear-gradient(90deg, #0052d4, #4364f7, #6fb1fc);
+  background: #1a73e8;
   color: white;
-  padding: 15px 0;
+  padding: 1rem;
   text-align: center;
-  margin-bottom: 15px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
-
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-nav button {
-  background: #ffc107;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 5px;
-  font-weight: 600;
-  cursor: pointer;
-  margin-left: 10px;
-}
-
-section {
-  max-width: 900px;
-  margin: 0 auto 30px;
-  background: white;
-  padding: 15px 20px;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
-}
-
-h2, h3 {
-  margin-top: 0;
-}
-
-#categoryFilter {
-  padding: 7px;
-  font-size: 1rem;
-  margin-bottom: 15px;
-}
-
-#contentList > div {
-  background-color: #e3f2fd;
-  margin-bottom: 12px;
-  padding: 15px;
-  border-radius: 7px;
-  border-left: 6px solid #2196f3;
-}
-
-#contentList h4 {
-  margin: 0 0 10px 0;
-  color: #0d47a1;
-}
-
-#postForm label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-#postForm input[type="text"],
-#postForm select,
-#postForm textarea {
-  width: 100%;
-  padding: 8px 10px;
-  margin-top: 5px;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-#postForm button {
-  background-color: #0d47a1;
+.toggle-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #333;
   color: white;
   border: none;
-  padding: 10px 18px;
-  border-radius: 6px;
-  font-weight: 700;
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  margin-right: 10px;
+  border-radius: 5px;
 }
-
-#adminPostList > div {
-  background-color: #d1c4e9;
-  margin-bottom: 12px;
-  padding: 12px 15px;
-  border-radius: 6px;
+.login-panel {
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+.login-panel input {
+  display: block;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   position: relative;
 }
-
-.admin-post-title {
-  font-weight: 700;
-  color: #4527a0;
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  max-height: 200px;
+  object-fit: cover;
 }
-
-.admin-post-actions {
-  position: absolute;
-  right: 10px;
-  top: 12px;
+.signature {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #555;
 }
-
-.admin-post-actions button {
-  background-color: #6a1b9a;
-  border: none;
-  color: white;
-  padding: 4px 10px;
-  margin-left: 6px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.9rem;
+.dark-mode {
+  background: #121212;
+  color: #f0f0f0;
 }
-
-.admin-post-actions button.delete-btn {
-  background-color: #b71c1c;
+.dark-mode .card {
+  background: #1e1e1e;
+  color: #ddd;
 }
-
-@media (max-width: 600px) {
-  body {
-    padding: 0 10px;
-  }
-  header h1 {
-    font-size: 1.5rem;
-  }
+.dark-mode .toggle-btn {
+  background: #eee;
+  color: #111;
 }

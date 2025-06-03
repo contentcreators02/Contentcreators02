@@ -1,85 +1,24 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Content Creators 02</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Firebase SDKs -->
-  <script type="module" src="https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js"></script>
-  <script type="module" src="https://www.gstatic.com/firebasejs/11.8.1/firebase-auth.js"></script>
-  <script type="module" src="https://www.gstatic.com/firebasejs/11.8.1/firebase-firestore.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Creators 02 - গল্প সমগ্র</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <button class="toggle-btn" onclick="toggleMode()">🌓 থিম</button>
+  <div class="login-panel">
+    <input type="email" id="email" placeholder="ইমেইল">
+    <input type="password" id="password" placeholder="পাসওয়ার্ড">
+    <button onclick="login()">লগইন</button>
+    <button onclick="logout()">লগআউট</button>
+  </div>
+  <header>
+    <h1>Content Creators 02 - গল্প সমগ্র</h1>
+  </header>
+  <main class="container" id="storyContainer"></main>
 
-<header>
-  <h1>Content Creators 02</h1>
-  <nav>
-    <button id="loginBtn">লগইন</button>
-    <button id="logoutBtn" style="display:none;">লগআউট</button>
-  </nav>
-</header>
-
-<section id="loginSection" style="display:none;">
-  <h2>অ্যাডমিন লগইন</h2>
-  <input type="email" id="email" placeholder="ইমেইল" />
-  <input type="password" id="password" placeholder="পাসওয়ার্ড" />
-  <button id="signInBtn">লগইন</button>
-  <p id="loginError" style="color:red;"></p>
-</section>
-
-<section id="contentSection">
-  <h2>কন্টেন্ট ব্রাউজ করুন</h2>
-  
-  <select id="categoryFilter">
-    <option value="all">সব ক্যাটাগরি</option>
-    <option value="rhymes">ছড়া</option>
-    <option value="shortStories">ছোট গল্প</option>
-    <option value="longStories">বড় গল্প</option>
-    <option value="jokes">জোকস</option>
-    <option value="educational">শিক্ষামূলক গল্প</option>
-    <option value="chhands">ছন্দ</option>
-    <option value="islamicMotivation">ইসলামিক মোটিভেশনাল কনটেন্ট</option>
-  </select>
-
-  <div id="contentList"></div>
-</section>
-
-<section id="adminPanel" style="display:none;">
-  <h2>অ্যাডমিন প্যানেল - পোস্ট যোগ করুন / সম্পাদনা করুন</h2>
-
-  <form id="postForm">
-    <label>ক্যাটাগরি:
-      <select id="postCategory" required>
-        <option value="">-- নির্বাচন করুন --</option>
-        <option value="rhymes">ছড়া</option>
-        <option value="shortStories">ছোট গল্প</option>
-        <option value="longStories">বড় গল্প</option>
-        <option value="jokes">জোকস</option>
-        <option value="educational">শিক্ষামূলক গল্প</option>
-        <option value="chhands">ছন্দ</option>
-        <option value="islamicMotivation">ইসলামিক মোটিভেশনাল কনটেন্ট</option>
-      </select>
-    </label>
-
-    <label>টাইটেল:
-      <input type="text" id="postTitle" required />
-    </label>
-
-    <label>বিস্তারিত লেখা:
-      <textarea id="postContent" rows="8" required></textarea>
-    </label>
-
-    <button type="submit" id="submitPostBtn">পোস্ট সংরক্ষণ করুন</button>
-    <button type="button" id="cancelEditBtn" style="display:none;">সম্পাদনা বাতিল করুন</button>
-  </form>
-
-  <hr />
-
-  <h3>আপনার পোস্টসমূহ</h3>
-  <div id="adminPostList"></div>
-</section>
-
-<script type="module" src="app.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
