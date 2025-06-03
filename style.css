@@ -1,93 +1,137 @@
-
-:root {
-  --primary-color: #1e3a8a;
-  --background-color: #f9fafb;
-  --text-color: #111827;
-  --accent-color: #f59e0b;
-}
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Noto Sans Bengali', sans-serif;
+  background-color: #f9f9f9;
   margin: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  padding: 0 15px;
+  color: #222;
 }
 
 header {
-  background-color: var(--primary-color);
+  background: linear-gradient(90deg, #0052d4, #4364f7, #6fb1fc);
   color: white;
-  padding: 1rem;
+  padding: 15px 0;
   text-align: center;
+  margin-bottom: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  gap: 1.5rem;
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+nav button {
+  background: #ffc107;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 10px;
 }
 
 section {
-  padding: 2rem;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-h2 {
-  color: var(--primary-color);
-}
-
-.content-list {
-  margin-top: 1rem;
-  background: #ffffff;
+  max-width: 900px;
+  margin: 0 auto 30px;
+  background: white;
+  padding: 15px 20px;
   border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 500px;
-  margin: 0 auto;
+h2, h3 {
+  margin-top: 0;
 }
 
-input, textarea, select, button {
-  padding: 0.8rem;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
+#categoryFilter {
+  padding: 7px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+#contentList > div {
+  background-color: #e3f2fd;
+  margin-bottom: 12px;
+  padding: 15px;
+  border-radius: 7px;
+  border-left: 6px solid #2196f3;
+}
+
+#contentList h4 {
+  margin: 0 0 10px 0;
+  color: #0d47a1;
+}
+
+#postForm label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+#postForm input[type="text"],
+#postForm select,
+#postForm textarea {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 5px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
   font-size: 1rem;
 }
 
-button {
-  background-color: var(--accent-color);
+#postForm button {
+  background-color: #0d47a1;
   color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  margin-right: 10px;
 }
 
-button:hover {
-  background-color: #d97706;
+#adminPostList > div {
+  background-color: #d1c4e9;
+  margin-bottom: 12px;
+  padding: 12px 15px;
+  border-radius: 6px;
+  position: relative;
 }
 
-footer {
-  text-align: center;
-  background: var(--primary-color);
+.admin-post-title {
+  font-weight: 700;
+  color: #4527a0;
+}
+
+.admin-post-actions {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+}
+
+.admin-post-actions button {
+  background-color: #6a1b9a;
+  border: none;
   color: white;
-  padding: 1rem;
+  padding: 4px 10px;
+  margin-left: 6px;
+  border-radius: 4px;
+  cursor: pointer;
   font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 0.8rem;
+.admin-post-actions button.delete-btn {
+  background-color: #b71c1c;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0 10px;
+  }
+  header h1 {
+    font-size: 1.5rem;
   }
 }
